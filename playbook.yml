@@ -1,0 +1,8 @@
+---
+- hosts: web
+  become: yes
+  user: ubuntu
+  roles:
+    - geerlingguy.java
+    - role: postedin.languagetool
+      languagetool_server_maxCheckThreads: 32
